@@ -1,0 +1,73 @@
+<% layout('/layouts/boilerplate') -%>
+<body>
+  <div class="row mt-3 mb-3">
+    
+    <form
+      method="POST"
+      class="col-8 offset-2"
+      action="/listings/<%= listing._id %>?_method=PUT"
+    >
+    <h1>Edit your listing</h1>
+      <input type="hidden" name="_method" value="PUT" />
+      <div class="mb-3">
+        <label for="title" class="form-label">Enter the title</label>
+        <input
+          type="text"
+          name="listing[title]"
+          value="<%= listing.title %>"
+          class="form-control"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label"
+          >Enter the description</label
+        >
+
+        <textarea type="text" name="listing[description]" class="form-control">
+      <%= listing.description %></textarea
+        >
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Enter image </label>
+        <input
+          type="text"
+          name="listing[image]"
+          value="<%= listing.image.url%>"
+          class="form-control"
+        />
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label for="price" class="form-label">Enter price</label>
+          <input
+            type="number"
+            name="listing[price]"
+            value="<%= listing.price %>"
+            class="form-control"
+          />
+        </div>
+
+        <div class="col-md-8">
+          <label for="country" class="form-label">Enter the country</label>
+          <input
+            type="text"
+            name="listing[country]"
+            value="<%= listing.country %>"
+            class="form-control"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Enter the location</label>
+        <input
+          type="text"
+          name="listing[location]"
+          value="<%= listing.location %>"
+          class="form-control"
+        />
+      </div>
+      <button class="btn btn-dark m-2 add-btn">Edit</button>
+    </form>
+  </div>
+</body>

@@ -1,0 +1,95 @@
+.fa-compass{
+    color: red;
+    font-size: 2rem;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* NAVBAR */
+.navbar{
+    height: 5rem;
+}
+
+.nav-link{
+    color: rgb(31, 31, 31) !important;
+}
+
+footer{
+    border: 1px solid black;
+    height: 7rem;
+}
+
+.f-info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.f-socials{
+    font-size: 1.5rem;
+}
+
+.f-info .f-brand p{
+    padding: 0;
+    margin: 0;
+}
+
+.f-cc a{
+    color: black;
+text-decoration: none;
+}
+
+.f-cc a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+.card-img-top{
+    border-radius: 1rem;
+}
+
+.card{
+    border: none !important;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.add-btn{
+    background-color: rgb(255, 89, 0) !important;
+    border: none !important;
+}
+
+.show-btn{
+    display: flex;
+
+}
+
+.edit-btn, .delete-btn{
+    width: 10rem;
+    margin-bottom: 1rem;
+    border: none !important;
+}
+
+.edit-btn{
+    margin-top: 1rem;
+    background-color: rgb(255, 243, 221) !important;
+    color: orange !important;
+}
+
+.delete-btn{
+    background-color: rgb(255, 221, 221) !important;
+    color: red !important;
+}

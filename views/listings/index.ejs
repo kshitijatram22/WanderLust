@@ -1,0 +1,28 @@
+<% layout('/layouts/boilerplate') -%>
+
+  <body>
+    <h1>All Listings</h1>
+    <!-- <form method="GET" action="/listings/new">
+    <button>Create new listing</button>
+  </form> -->
+  <div class="row g-4"> <!-- g-4 adds gap between cards -->
+    <% for(let listing of allListings){ %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <a href="/listings/<%= listing._id %>" class="text-decoration-none text-dark">
+          <div class="card h-100">
+            <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_Img" height="300rem">
+            <div class="card-body">
+              <p class="card-text fw-bold"><%= listing.title %></p>
+              <p class="card-text text-muted">&#x20B9;<%= listing.price.toLocaleString("en-IN") %>/Night</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% } %>
+  </div>
+  
+
+
+
+   
+  </body>
